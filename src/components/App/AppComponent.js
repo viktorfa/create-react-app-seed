@@ -9,6 +9,7 @@ class AppComponent extends Component {
         super(props);
 
         this.incrementFoo = this.props.incrementFoo.bind(this);
+        this.asyncFetch = this.props.asyncFetch.bind(this);
     }
 
     render() {
@@ -19,10 +20,11 @@ class AppComponent extends Component {
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
                 <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
+                    {this.props.zen}
                 </p>
                 <p>{this.props.foo}</p>
                 <button onClick={this.incrementFoo}>Increment</button>
+                <button onClick={this.asyncFetch}>Fetch zen</button>
             </div>
         );
     }
@@ -30,6 +32,7 @@ class AppComponent extends Component {
 
 AppComponent.propTypes = {
     incrementFoo: PropTypes.func.isRequired,
+    asyncFetch: PropTypes.func.isRequired,
     foo: PropTypes.number.isRequired
 };
 
