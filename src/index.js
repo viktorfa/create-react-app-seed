@@ -12,6 +12,13 @@ import Layout from "./components/Layout/Layout";
 
 ReactDOM.render((
         <Provider store={store}>
+            {
+                /**
+                 * This router stuff looks kinda messy, but it's supposed to be routing for a site with a landing
+                 * page that is different from the other pages. The landing page is the first route at '/' and the
+                 * other pages are wrapped in a Layout inside the next Switch.
+                 */
+            }
             <ConnectedRouter history={history}>
                 <Switch>
                     <Route path="/" component={App} exact/>
