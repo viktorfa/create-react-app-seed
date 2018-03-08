@@ -3,7 +3,7 @@ import AppComponent from "./AppComponent";
 import * as actions from './actions';
 
 const mapStateToProps = (state) => {
-    return {foo: state.appReducer.foo}
+    return {foo: state.app.foo}
 };
 
 const mapDispatchToProps = (dispatch) => {
